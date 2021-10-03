@@ -1,0 +1,288 @@
+import 'dart:io';
+import 'dart:core';
+main() {
+  
+   bool t1 = true;
+   bool f1=false;
+   double value1;
+   String ch='y';
+   while(ch=='y')
+   {
+   print("Enter 2 numbers:");
+   print("Enter number1 : ");
+   int n1=int.parse(stdin.readLineSync()!);
+
+   print("Enter number2 : ");
+   int n2 = int.parse(stdin.readLineSync()!);
+
+   print("Enter number3 : ");
+   int n3=int.parse(stdin.readLineSync()!);
+
+   print("Enter number4 : ");
+   int n4 = int.parse(stdin.readLineSync()!);
+
+   print("Enter operator : ");
+   String op=(stdin.readLineSync()!);
+  
+  
+  switch(op)
+  {
+    case '++': 
+      n1++;
+      n2++;
+      n3++;
+      n4++;
+      print("postfix increment");
+      print('number1= $n1');
+      print('number2= $n2');
+      print('number3= $n3');
+      print('number4= $n4');
+
+      
+      ++n1;
+      ++n2;
+      ++n3;
+      ++n4;
+      print("prefix increment");
+      print('number1= $n1');
+      print('number2= $n2');
+      print('number3= $n3');
+      print('number4= $n4');
+      break;
+    
+    case '--': 
+      n1--;
+      n2--;
+      n3--;
+      n4--;
+    
+      print("postfix decrement");
+      print('number1= $n1');
+      print('number2= $n2');
+      print('number3= $n3');
+      print('number4= $n4');      
+      
+      --n1;
+      --n2;
+      --n3;
+      --n4;
+
+      print("prefix decrement");
+      
+      print('number1= $n1');
+      print('number2= $n2');
+      print('number3= $n3');
+      print('number4= $n4');
+      break;
+      
+    case '*':
+    print("Multiplication number1*number2 = ${n1*n2}");
+    print("Multiplication number3*number4 = ${n3*n4}");
+    break;
+
+    case '/':
+    if(n2!=0){
+    print("Division number1/number2 = ${n1/n2}"); 
+    }
+    else{
+      print("Division by Zero");
+    }
+
+    if (n4!=0){
+    print("Division number3/number4 = ${n3/n4}");
+    }
+    else{
+      print("Division by Zero");
+    }
+    break;
+
+    case '-':
+    print("Subtraction number1-number2 = ${n1-n2}");
+    print("Subtraction number3-number4 = ${n3-n4}");
+    break;
+
+    case '+':
+    print("Addition number1+number2 = ${n1+n2}");
+    print("Addition number3+number4 = ${n3+n4}");
+    break;
+
+    case '>>': 
+    print("After >>");
+    print(n1>>4);
+    print(n2>>4);
+    print(n3>>4);
+    print(n4>>4);
+    break;
+
+    case '<<':
+    print("After <<"); 
+    print(n1<<4);
+    print(n2<<4);
+    print(n3<<4);
+    print(n4<<4);
+    break;
+
+    case '&': 
+    print("After &");
+    print(n1&n2);
+    print(n3&n4);
+    break;
+
+    case '|': 
+    print("After |");
+    print(n1|n2);
+    print(n3|n4);
+    break;
+    
+    case '&&':
+    print(n1>n2 && n3<n4);
+    break;
+
+    case '||':
+    print(n3>n4 || n1<n2);
+    break;
+
+    case '!=':
+    print(n1!=n2);
+    print(n3!=n4);
+    break;
+
+    case '^': 
+    
+    print(n1^n2);
+    print(n3^n4);
+    break;
+
+    case '~': 
+    print("After ~");
+    print(~n1);
+    print(~n2);
+    print(~n3);
+    print(~n4);
+    break;
+
+    case '%':
+    print("Remainder number1%number2= ${n1%n2}");
+    print("Remainder number3%number4= ${n3%n4}");
+    break;
+
+    case '>=':
+     print("number1 >= number2 ${n1>=n2}");
+     print("number3 >= number4 ${n3>=n4}");
+     break;
+
+     case '<=':
+     print("number1 <= number2 ${n1<=n2}");
+     print("number3 <= number4 ${n3<=n4}");
+     break;
+
+     case '<':
+     print("number1 < num2 ${n1<n2}");
+     print("number3 < num4 ${n3<n4}");
+     break;
+
+     case '>':
+     print("number1 > number2 ${n1>n2}");
+     print("number3 > number4 ${n3>n4}");
+     break;
+
+     case 'is':
+     print("number1 is double ${n1 is double}");
+     print("number2 is double ${n2 is double}");
+     print("number3 is int ${n3 is int}");
+     print("number4 is int ${n4 is int}");
+     break;
+  
+    case 'is!':
+     print("number1 is not double ${n1 is! double}");
+     print("number2 is not double ${n2 is! double}");
+     print("number3 is not int ${n3 is! int}");
+     print("number4 is not int ${n4 is! int}");
+     break;
+
+     case '==':
+     print('number1 == number2 ${n1==n2}');
+     print(' number3 == number4 ${n3==n4}');
+     break;
+
+     case '!':
+     print("t=$t1");
+     print("!true = ${!t1}");
+     print("!false = ${!f1}");
+     break;
+    
+    case 'as':
+    print(n1 as String);
+    print(n2 as String);
+    print(n3 as String);
+    print(n4 as String);
+
+    break;
+    
+     case '??':
+   int ?a;
+   print(a);
+     a??=3;
+     print("Assigning value to null variable");
+     print(a);
+     a ??= 5;
+     print("Assigning value to again");
+     print(a);
+     break;
+
+     case '?:':
+     print(n1 > n2 ? "$nu1 is greater than $n2":"$n1 is less than or equal to $n2");
+     print(n3 > n4 ? "$n3 is greater than $n4":"$n3 is less than or equal to $n4");
+     break;
+
+     case '/=':
+     if(n2!=0)
+     {
+       value1=n1.toDouble(); 
+       print(value1/=n2);
+       }
+     else
+     {
+       print("Divide by Zero");
+       }
+       if(n4!=0)
+     {
+       value1=n3.toDouble(); 
+       print(value1/=n4);
+       }
+     else
+     {
+       print("Divide by Zero");
+       }
+     break;
+
+    case '+=':
+     print("number1+=number2 = ${n1+=n2}");
+     print("number3=number4 = ${n3+=n4}");
+     break;
+     
+     case '-=':
+     print("number1+=number2 = ${n1-=n2}");
+     print("number3=number4 = ${n3-=n4}");
+     break;
+     
+     case '*=':
+     print("number1+=number2 = ${n1*=n2}");
+     print("number3=number4 = ${n3*=n4}");
+     break;
+
+     case '>>>':
+     print("number1 ${n1>>>2}");
+     print("number2 ${n2>>>2}");
+     print("number3 ${n3>>>2}");
+     print("number4 ${n4>>>2}");
+     break;
+     
+    default:
+    print('Wrong operator');
+    break;
+  }
+  print("Enter y to continue...");
+  ch=(stdin.readLineSync()!);
+  }
+}
